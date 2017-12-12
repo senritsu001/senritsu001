@@ -481,7 +481,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 --------------------------------*/
 #about {
   background: #fff;
-  padding: 80px 0;
+  padding: 50px 0;
 }
 
 #about .about-container .background {
@@ -952,9 +952,9 @@ body.mobile-nav-active #mobile-nav-toggle {
   color: #ccc;
 }
 .map {
-width: 100%;
-border-top: solid 1px #eee;
-border-bottom: solid 1px #eee;
+  width: 100%;
+  border-top: solid 1px #eee;
+  border-bottom: solid 1px #eee;
 }
 
 #arrow-down { position: relative; margin: 0 auto; text-align: center; animation: jump 3s infinite;
