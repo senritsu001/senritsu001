@@ -125,7 +125,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 26px;
   }
   #header #logo img {
-    max-height: 40px;
+    /*max-height: 40px;*/
   }
 }
 
