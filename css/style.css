@@ -125,7 +125,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 26px;
   }
   #header #logo img {
-    /*max-height: 40px;*/
+    margin-left: -15px
   }
 }
 
@@ -352,7 +352,7 @@ h1, h2, h3, h4, h5, h6 {
   right: 0;
   top: 0;
   z-index: 999;
-  margin: 20px 20px 0 0;
+  margin: 20px 6px 0 0;
   border: 0;
   background: none;
   font-size: 24px;
