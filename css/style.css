@@ -964,3 +964,10 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 @keyframes jump { 0% { top: 0; } 50% { top: 30px; } 100% { top: 0; } }
+
+.not-active {
+  pointer-events: none;
+  cursor: default;
+  text-decoration:none;
+  /* color:black; */
+}
