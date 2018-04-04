@@ -145,6 +145,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 100vh;
   background-image: url(../img/hero-bg.jpg);
   background-size: cover;
+  background-position: center;
 }
 
 #hero .hero-container {
