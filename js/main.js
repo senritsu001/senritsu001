@@ -9,27 +9,47 @@ jQuery(document).ready(function( $ ) {
       $('.back-to-top').fadeOut('slow');
       $('#header').removeClass('header-fixed');
     }
-    if ($(this).scrollTop() <= 600) {
-      $('.nav-menu .menu-active').removeClass('menu-active');
-      $('#top').addClass('menu-active');
-    }
-    if ($(this).scrollTop() > 600 && $(this).scrollTop() <= 1200) {
-      $('.nav-menu .menu-active').removeClass('menu-active');
-      $('#kaisha').addClass('menu-active');
-    }
-    if ($(this).scrollTop() > 1200 && $(this).scrollTop() <= 1800) {
-      $('.nav-menu .menu-active').removeClass('menu-active');
-      $('#jigyou').addClass('menu-active');
-    }
-    if ($(this).scrollTop() > 1800 && $(this).scrollTop() <= 2400) {
-      $('.nav-menu .menu-active').removeClass('menu-active');
-      $('#saiyou').addClass('menu-active');
-    }
-    if ($(this).scrollTop() > 2400) {
-      $('.nav-menu .menu-active').removeClass('menu-active');
-      $('#toiawase').addClass('menu-active');
-    }
+
+    var navHeight = $('#header').outerHeight();
+    $(document).scroll(function(){
+      var st = $(this).scrollTop();
+      var $hero = $("#hero");
+      if(st + navHeight > $hero.offset().top && 
+          st + navHeight  <= $hero.offset().top + $hero.height()){
+            $('.nav-menu .menu-active').removeClass('menu-active');
+            $('#top').addClass('menu-active');
+      }
+      var $about = $("#about")
+      if(st + navHeight >= $about.offset().top && 
+        st + navHeight  <= $about.offset().top + $about.height()){
+          $('.nav-menu .menu-active').removeClass('menu-active');
+          $('#mAbout').addClass('menu-active');
+      }
+
+      var $services = $("#services");
+      if(st + navHeight >= $services.offset().top && 
+        st + navHeight  <= $services.offset().top + $services.height()){
+          $('.nav-menu .menu-active').removeClass('menu-active');
+          $("#mServices").addClass('menu-active');
+      }
+
+      var $portfolio = $("#portfolio");
+      if(st + navHeight >= $portfolio.offset().top && 
+        st + navHeight  <= $portfolio.offset().top + $portfolio.height()){
+          $('.nav-menu .menu-active').removeClass('menu-active');
+          $("#mPortfolio").addClass('menu-active');
+      }
+
+      var $contact = $("#contact");
+      if(st + navHeight >= $contact.offset().top && 
+        st + navHeight  <= $contact.offset().top + $contact.height()){
+          $('.nav-menu .menu-active').removeClass('menu-active');
+          $("#mContact").addClass('menu-active');
+      }
+    });
   });
+
+
   $('.back-to-top').click(function(){
     $('html, body').animate({scrollTop : 0},1500, 'easeInOutExpo');
     return false;
